@@ -1,4 +1,4 @@
-TOKEN = "ODYzMDk5MjI1MTIxMjI2NzUy.YOh9yg.D9qrDxUzWamiL0LrvifBW0RKLck"
+TOKEN = "my_token"
 
 MAX_ROLES_PER_USER = 999
 
