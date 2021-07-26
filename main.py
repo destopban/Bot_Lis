@@ -8,12 +8,10 @@ import datetime as dt
 import pyautogui
 from threading import *
 import time
-import pynput
 
 
 # from keep_alive import keep_alive
 
-mouse = pynput.mouse.Controller()
 pyautogui.FAILSAFE = False
 ##########################################__SETTINGS__################################################################
 
@@ -65,9 +63,9 @@ slut_min = -15000
 crime_max = 15000
 crime_min = -50000
 
-slut_pause = dt.timedelta(hours=11, minutes=0, seconds=0)
-works_pause = dt.timedelta(hours=11, minutes=0, seconds=0)
-crime_pause = dt.timedelta(hours=11, minutes=0, seconds=0)
+slut_pause = dt.timedelta(hours=9, minutes=0, seconds=0)
+works_pause = dt.timedelta(hours=10, minutes=0, seconds=0)
+crime_pause = dt.timedelta(hours=9, minutes=0, seconds=0)
 
 ######################################################################################################################
 
@@ -237,7 +235,8 @@ async def w(ctx, arg=None):
                     await ctx.send(
                         embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
                             .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                await ctx.send(
+                else:
+                    await ctx.send(
                     embed=discord.Embed(description=random.choice(works_plus).format(num(n)), color=0x4cbb17)
                         .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 if p in db:
@@ -728,7 +727,7 @@ async def game(ctx, *arg):
                     name="Ивент"))
         elif len(arg) == 3:
             if arg[1] == "up":
-                mouse.move(1, -float(arg[2]))
+                pyautogui.move(1, -float(arg[2]), 0.25)
             elif arg[1] == "down":
                 pyautogui.move(1, float(arg[2]), 0.25)
             elif arg[1] == "left":
