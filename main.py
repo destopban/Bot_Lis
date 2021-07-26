@@ -231,14 +231,9 @@ async def w(ctx, arg=None):
             timer = works_pause - (dt.datetime.now() - timel)
             if timer <= dt.timedelta(minutes=0):
                 n = random.randint(works_min, works_max)
-                if ctx.author.id in [474230378421420033]:
-                    await ctx.send(
-                        embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                else:
-                    await ctx.send(
-                    embed=discord.Embed(description=random.choice(works_plus).format(num(n)), color=0x4cbb17)
-                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                await ctx.send(
+                embed=discord.Embed(description=random.choice(works_plus).format(num(n)), color=0x4cbb17)
+                    .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 if p in db:
                     db[p] += n
                 else:
@@ -256,10 +251,6 @@ async def w(ctx, arg=None):
                 #     f"{message.author.mention} осталось {hours} часов и {minutes} минут" if hours > 1 else f"{message.author.mention} осталось {minutes} минут и {seconds} секунд")
         else:
             n = random.randint(works_min, works_max)
-            if ctx.author.id in [474230378421420033]:
-                await ctx.send(
-                    embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
             await ctx.send(
                 embed=discord.Embed(description=random.choice(works_plus).format(num(n)), color=0x4cbb17)
                     .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
@@ -292,25 +283,13 @@ async def sl(ctx, arg=None):
                 if db[p] < 0:
                     n = random.randint(slut_min - (slut_min // 2), slut_max)
                 if n >= 0:
-                    if ctx.author.id in [474230378421420033]:
-                        await ctx.send(
-                            embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                    else:
-                        await ctx.send(
-                            embed=discord.Embed(description=random.choice(slut_plus).format(num(n)), color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                    await ctx.send(
+                        embed=discord.Embed(description=random.choice(slut_plus).format(num(n)), color=0x4cbb17)
+                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 else:
-                    if ctx.author.id in [474230378421420033]:
-                        await ctx.send(
-                            embed=discord.Embed(
-                                description=':white_check_mark: ваши голые фото разнеслись по сети и все ваши знакомые попрасили маральную компенчацию в размере ' + emoji_pp + ' {0}'.format(num(n)),
-                                color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                    else:
-                        await ctx.send(
-                            embed=discord.Embed(description=random.choice(slut_minus).format(num(n)), color=0xFF2A00)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                    await ctx.send(
+                        embed=discord.Embed(description=random.choice(slut_minus).format(num(n)), color=0xFF2A00)
+                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 if p in db:
                     db[p] += n
                 else:
@@ -331,25 +310,13 @@ async def sl(ctx, arg=None):
             if db[p] < 0:
                 n = random.randint(slut_min - (slut_min // 2), slut_max)
             if n >= 0:
-                if ctx.author.id in [474230378421420033]:
-                    await ctx.send(
-                        embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                else:
-                    await ctx.send(
-                        embed=discord.Embed(description=random.choice(slut_plus).format(num(n)), color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                await ctx.send(
+                    embed=discord.Embed(description=random.choice(slut_plus).format(num(n)), color=0x4cbb17)
+                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
             else:
-                if ctx.author.id in [474230378421420033]:
-                    await ctx.send(
-                        embed=discord.Embed(
-                            description=':white_check_mark: ваши голые фото разнеслись по сети и все ваши знакомые попрасили маральную компенчацию в размере ' + emoji_pp + ' {0}'.format(num(n)),
-                            color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                else:
-                    await ctx.send(
-                        embed=discord.Embed(description=random.choice(slut_minus).format(num(n)), color=0xFF2A00)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                await ctx.send(
+                    embed=discord.Embed(description=random.choice(slut_minus).format(num(n)), color=0xFF2A00)
+                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
             if p in db:
                 db[p] += n
             else:
@@ -379,25 +346,13 @@ async def c(ctx, arg=None):
                 if db[p] < 0:
                     n = random.randint(crime_min - (crime_min // 2), crime_max)
                 if n >= 0:
-                    if ctx.author.id in [474230378421420033]:
-                        await ctx.send(
-                            embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                    else:
-                        await ctx.send(
-                            embed=discord.Embed(description=random.choice(crime_plus).format(num(n)), color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                    await ctx.send(
+                        embed=discord.Embed(description=random.choice(crime_plus).format(num(n)), color=0x4cbb17)
+                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 else:
-                    if ctx.author.id in [474230378421420033]:
-                        await ctx.send(
-                            embed=discord.Embed(
-                                description=':white_check_mark:  ваши голые фото разнеслись по сети и все ваши знакомые попрасили маральную компенчацию в размере ' + emoji_pp + ' {0}'.format(num(n)),
-                                color=0x4cbb17)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                    else:
-                        await ctx.send(
-                            embed=discord.Embed(description=random.choice(crime_minus).format(num(n)), color=0xFF2A00)
-                                .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                    await ctx.send(
+                        embed=discord.Embed(description=random.choice(crime_minus).format(num(n)), color=0xFF2A00)
+                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
                 if p in db:
                     db[p] += n
                 else:
@@ -418,25 +373,13 @@ async def c(ctx, arg=None):
             if db[p] < 0:
                 n = random.randint(crime_min - (crime_min // 2), crime_max)
             if n >= 0:
-                if ctx.author.id in [474230378421420033]:
-                    await ctx.send(
-                        embed=discord.Embed(description=':white_check_mark: вы продали свои голые фото за' + emoji_pp + ' {0}'.format(num(n)), color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                else:
-                    await ctx.send(
-                        embed=discord.Embed(description=random.choice(crime_plus).format(num(n)), color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                await ctx.send(
+                    embed=discord.Embed(description=random.choice(crime_plus).format(num(n)), color=0x4cbb17)
+                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
             else:
-                if ctx.author.id in [474230378421420033]:
-                    await ctx.send(
-                        embed=discord.Embed(
-                            description=':white_check_mark:  ваши голые фото разнеслись по сети и все ваши знакомые попрасили маральную компенчацию в размере ' + emoji_pp + ' {0}'.format(num(n)),
-                            color=0x4cbb17)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
-                else:
-                    await ctx.send(
-                        embed=discord.Embed(description=random.choice(crime_minus).format(num(n)), color=0xFF2A00)
-                            .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
+                await ctx.send(
+                    embed=discord.Embed(description=random.choice(crime_minus).format(num(n)), color=0xFF2A00)
+                        .set_author(name=f"{ctx.author.name}", icon_url=ctx.author.avatar_url))
             if p in db:
                 db[p] += n
             else:
